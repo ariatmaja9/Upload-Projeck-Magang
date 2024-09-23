@@ -18,6 +18,7 @@ return new class extends Migration
             $table->bigInteger('id_kategori');
             $table->string('tahun_terbit', 100);
             $table->string('gambar')->nullable();
+            $table->string('dokumen')->nullable();
             $table->timestamps();
         });
     }

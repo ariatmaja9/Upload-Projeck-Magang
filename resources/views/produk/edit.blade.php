@@ -44,8 +44,13 @@
                     <input class="form-control" type="text" name="tahun_terbit" placeholder="Masukkan Tahun Terbit" value="{{old('tahun_terbit', $produk->tahun_terbit)}}">
                 </div>
                 <div class="mb-3">
-                    <label>Gambar</label>
+                    <label>Edit Gambar</label>
                     <input class="form-control" type="file" name="gambar" placeholder="Masukkan Gambar">
+                    <p class="form-text">Kosongkan jika tidak ingin mengubah Gambar!</p>
+                </div>
+                <div class="mb-3">
+                    <label>Edit Buku</label>
+                    <input class="form-control" type="file" name="dokumen" placeholder="Masukkan Buku PDF">
                     <p class="form-text">Kosongkan jika tidak ingin mengubah Buku PDF!</p>
                 </div>
                 <div class="mb-4">

@@ -12,7 +12,7 @@ class Produk extends Model
     protected $table = 'tb_buku';
     protected $primaryKey = 'id_buku';
 
-    protected $fillable = ['id_buku','judul','pengarang','id_kategori','tahun_terbit', 'gambar'];
+    protected $fillable = ['id_buku','judul','pengarang','id_kategori','tahun_terbit', 'gambar', 'dokumen'];
 
     public function getImage()
     {
@@ -21,5 +21,15 @@ class Produk extends Model
         else
             return asset('images/no_image.png');
     }
+
+    public function getDokumen()
+    {
+    if ($this->dokumen && file_exists(public_path('dokumen/' . $this->dokumen))) {
+        return asset('dokumen/' . $this->dokumen);
+    } else {
+        return null;
+    }
+    }
+
 }
 

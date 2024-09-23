@@ -66,6 +66,15 @@ class ProdukController extends Controller
             $produk->gambar = $filename;
         }
 
+        // $produk = new Produk($request->all());
+
+        if ($request->file('dokumen')) {
+            $dokumen = $request->file('dokumen');
+            $filename = rand(1000, 9999) . $dokumen->getClientOriginalName();
+            $dokumen->move('dokumen/', $filename);
+            $produk->dokumen = $filename;
+        }
+
         $produk->save();
         return redirect()->route('produk.index')->with(['message' => 'Data Berhasil Di Tambahkan']);
     }
@@ -99,6 +108,13 @@ class ProdukController extends Controller
             $filename = rand(1000, 9999) . $gambar->getClientOriginalName();
             $gambar->move('images/produk', $filename);
             $data['gambar'] = $filename;
+        }
+        // $data = $request->all();
+        if ($request->file('dokumen')) {
+            $dokumen = $request->file('dokumen');
+            $filename = rand(1000, 9999) . $dokumen->getClientOriginalName();
+            $dokumen->move('dokumen/', $filename);
+            $data['dokumen'] = $filename;
         }
         $produk->update($data);
         return redirect()->route('produk.index')->with(['message' => 'Data Berhasil Di Ubah!']);

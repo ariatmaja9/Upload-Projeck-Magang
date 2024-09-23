@@ -46,6 +46,10 @@
                     <label>Upload Buku</label>
                     <input class="form-control" type="file" name="gambar" placeholder="Upload Buku">
                 </div>
+                <div class="mb-3">
+                    <label>Upload Buku</label>
+                    <input class="form-control" type="file" name="dokumen" placeholder="Upload Buku">
+                </div>
                 <div class="mb-4">
                     <button class="btn btn-primary me-2"><i class="bi bi-save"></i> Simpan</button>
                     <a class="btn btn-danger" href="{{route('produk.index')}}"><i class="bi bi-arrow-90deg-left"></i> Kembali</a>

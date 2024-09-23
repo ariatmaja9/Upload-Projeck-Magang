@@ -15,43 +15,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 
-Route::get('m4/lat1', [M4Controller::class, 'lat1']);
-Route::get('m4/lat2', [M4Controller::class, 'lat2']);
-Route::get('m4/lat3', [M4Controller::class, 'lat3']);
-Route::get('m4/lat4', [M4Controller::class, 'lat4']);
-Route::get('m4/layout', [M4Controller::class, 'layout']);
 
-Route::get('m4/identitas',[M4Controller::class, 'm4_identitas'])->name('m4.identitas');
-Route::get('m4/pendidikan',[M4Controller::class, 'm4_pendidikan'])->name('m4.pendidikan');
-Route::get('m4/skill',[M4Controller::class, 'm4_skill'])->name('m4.skill');
-
-
-
-Route::get('m5/lat1', [M5Controller::class, 'lat1']);
-Route::get('m5/lat2', [M5Controller::class, 'lat2']);
-Route::post('m5/lat2_action', [M5Controller::class, 'lat2Action'])->name('m5.lat2.action');
-
-Route::get('mb/balok', [MBController::class, 'balok']);
-Route::post('mb/balok_action', [MBController::class, 'balokAction'])->name('mb.balok.action');
-Route::get('mb/segitiga', [MBController::class, 'segitiga']);
-Route::post('mb/segitiga_action', [MBController::class, 'segitigaAction'])->name('mb.segitiga.action');
-
-
-
-
-
-
-
-
-
-Route::get('/identitas' , [CVController::class, 'identitas'])->name
-('identitas');
-
-Route::get('/pendidikan' , [CVController::class, 'pendidikan'])->name
-('pendidikan');
-
-Route::get('/skill' , [CVController::class, 'skill'])->name
-('skill');
 
 
 // Route::view('/home', 'welcome');

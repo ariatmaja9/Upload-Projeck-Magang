@@ -29,10 +29,10 @@
                     <tr>
                         <th class="table-primary">No</th>
                         <th class="table-primary">Judul Buku</th>
-                        <th class="table-primary">Id Buku</th>
                         <th class="table-primary">Pengarang</th>
                         <th class="table-primary">Tahun Terbit</th>
                         <th class="table-primary">Kategori</th>
+                        <th class="table-primary">Gambar</th>
                         <th class="table-primary">Buku PDF</th>
                         @if (Auth::user()->level == 'admin')
                         <th class="table-primary">Aksi</th>
@@ -45,14 +45,14 @@
                     <tr>
                         <td>{{$no++}}</td>
                         <td>{{$produk->judul}}</td>
-                        <td>{{$produk->id_buku}}</td>
                         <td>{{$produk->pengarang}}</td>
                         <td>{{$produk->tahun_terbit}}</td>
                         <td>{{$produk->nama_kategori}}</td>
                         <td>
-                            <!-- <img src="{{ $produk->getImage() }}" height="100" alt="ini gambar"> -->
-                            <a href="{{ $produk->getImage() }}"><button class="btn btn-success" type="button">Membaca</button></a>
-
+                            <img src="{{ $produk->getImage() }}" height="100" alt="ini gambar">
+                        </td>
+                        <td>
+                            <a href="{{ $produk->getDokumen() }}"><button class="btn btn-success" type="button">Membaca</button></a>
                         </td>
                         @if (Auth::user()->level == 'admin')
                         <td>

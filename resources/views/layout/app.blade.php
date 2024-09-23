@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perpus Ari Atmaja</title>
+    <title>LestGoMembaca.id</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <script src="{{ asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.7.1.min.js')}}"></script>
@@ -51,7 +51,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand ms-5" href="{{route('home')}}"><b><i class="bi bi-book"></i> ARI PERPUS</b></a>
+          <a class="navbar-brand ms-5" href="{{route('home')}}"><b><i class="bi bi-book"></i> LEST GO, MEMBACA!</b></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
